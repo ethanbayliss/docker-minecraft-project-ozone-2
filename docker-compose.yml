@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.2'
 
 services:
   minecraft:
@@ -6,8 +6,8 @@ services:
     volumes:
       - minecraft-data:/data
     ports:
-      - "25565:25565"
-      - "25575:25575"
+      - "25566:25566"
+      - "25576:25576"
     restart: always
 
 volumes:
