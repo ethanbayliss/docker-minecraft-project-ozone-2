@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ENV SERVER_ZIP=https://addons-origin.cursecdn.com/files/2440/937/Project_Ozone_2-Server-v.2.3.0.zip
+ENV SERVER_ZIP=https://media.forgecdn.net/files/2509/703/Project_Ozone_2-Server-v.2.4.0.zip
 
 RUN apk --no-cache add wget openssl unzip
 RUN addgroup -g 1234 minecraft
@@ -14,7 +14,7 @@ RUN mkdir /tmp/minecraft && cd /tmp/minecraft && \
 
 USER minecraft
 
-EXPOSE 25565
+EXPOSE 25566
 
 ADD start.sh /start
 
@@ -26,4 +26,4 @@ CMD /start
 
 ENV MOTD A Minecraft (Project Ozone 2) Server Powered by Docker
 ENV LEVEL world
-ENV JVM_OPTS -Xms2048m -Xmx2048m
+ENV JVM_OPTS -Xms4g -Xmx4g
